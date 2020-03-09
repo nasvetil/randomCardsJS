@@ -1,0 +1,49 @@
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.cards__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100px;
+  height: 150px;
+  border-radius: 4px;
+  background-color: @colorWhite;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 12px 8px 8px 8px;
+
+  &-hidden:hover {
+    background-color: darken(@colorWhite, 5%);
+  }
+
+  &-hidden:active {
+    background-color: lighten(@colorWhite, 5%);
+  }
+
+  &--hidden:hover > .cards__status::before {
+    content: 'show';
+  }
+
+  &--empty {
+    background-color: @colorAbsoluteWhite;
+    border: 2px solid @colorBlack;
+    padding: (12px - 2px) (8px - 2px) (8px - 2px) (8px - 2px);
+  }
+
+  &--special {
+    background-color: @colorBlue;
+    color: @colorAbsoluteWhite;
+  }
+}
+
+.cards__number {
+  font-size: 24px;
+}
+
+.cards__status {
+  font-size: 16px;
+}

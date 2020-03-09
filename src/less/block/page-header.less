@@ -1,0 +1,43 @@
+.page-header__wrap {
+  background-color: transparent;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding-bottom: 20px;
+}
+
+@media (min-width: @minWidthTablet) and (max-width: @minWidthDesktop) {
+  .page-header__wrap {
+    min-height: 200px;
+  }
+}
+
+@media (min-width: @minWidthDesktop) {
+  .page-header__wrap {
+    min-height: 200px;
+  }
+}
+
+.page-header__title {
+  font-size: 30px;
+  margin-bottom: 0.3em;
+}
+
+@media (min-width: @minWidthTablet) {
+  .page-header__title {
+    font-size: 36px;
+  }
+}
+
+.page-header__description {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+@media (min-width: @minWidthTablet) {
+  .page-header__description {
+    font-size: 30px;
+  }
+}

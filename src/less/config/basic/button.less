@@ -1,0 +1,26 @@
+.button {
+  background-color: @colorButtonDefault;
+  color: @colorAbsoluteBlack;
+  border-radius: 4px;
+  border: 0;
+  height: 36px;
+  line-height: 36px;
+  font-size: 18px;
+  padding: 0 10px;
+
+  &:hover,
+  &:focus {
+    background-color: darken(@colorButtonDefault, 5%);
+  }
+
+  &:active {
+    background-color: lighten(@colorButtonDefault, 5%);
+  }
+
+  &--big {
+    height: 48px;
+    line-height: 48px;
+    font-size: 22px;
+    padding: 0 15px;
+  }
+}

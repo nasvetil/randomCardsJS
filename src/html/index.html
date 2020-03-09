@@ -4,14 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>randomCardJS</title>
+  <title>randomCardsJS</title>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <div id="app">
-    <h1>Hello world!</h1>
-  </div>
+  <header class="page-header">
+    <div class="page-header__wrap container">
+      <h1 class="page-header__title">randomCardsJS</h1>
+      <h2 class="page-header__description">Generate random cards</h2>
+    </div>
+  </header>
+  <main class="page-main">
+    <div class="page-main__wrap container">
+      <section class="page-main__section form">
+        <div class="form__wrap">
+            <section class="form__item">
+              <label class="form__label" for="cards-count">Cards count</label>
+              <input class="input" id="cards-count" type="number">
+            </section>
+            <section class="form__item">
+              <label class="form__label" for="special-cards-count">Active cards count</label>
+              <input class="input" id="special-cards-count" type="number">
+            </section>
+            <section class="form__item form__item--submit">
+              <input id="generate-button" class="button button--big" type="button" value="Generate">
+            </section>
+        </div>
+      </section>
+      <section id="card-block" class="page-main__section cards"></section>
+    </div>
+  </main>
+  <footer class="page-footer">
+    <div class="page-main__wrap container">
+      <a href="https://github.com/nasvetil" class="page-footer__link link link">nasvetil</a>
+    </div>
+  </footer>
   <script src="js/app.min.js"></script>
 </body>
 </html>

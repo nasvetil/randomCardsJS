@@ -1,0 +1,31 @@
+.link {
+  font-size: @fontSize;
+  line-height: @lineHeight;
+  text-decoration: none;
+  color: @colorBlack;
+  border-bottom: 1px solid fade(@colorBlack, 35%);
+
+  &--dark {
+    color: @colorWhite;
+    border-bottom: 1px solid fade(@colorWhite, 35%);
+  }
+
+  &--small {
+    font-size: @fontSizeSmall;
+  }
+
+  &--big {
+    font-size: @fontSizeBig;
+  }
+
+  &:hover,
+  &:focus {
+    color: @colorBlue;
+    border-bottom: 1px solid fade(@colorBlue, 35%);
+  }
+
+  &:active {
+    color: @colorRed;
+    border-bottom: 1px solid fade(@colorRed, 35%);
+  }
+}

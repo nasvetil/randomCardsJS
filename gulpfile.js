@@ -62,7 +62,7 @@ gulp.task('normalize', () => {
 });
 
 gulp.task('js', () => {
-  return gulp.src('src/js/app.js')
+  return gulp.src('src/js/**/*.js')
     .pipe(babel({
       presets: ['@babel/env']
     }))
@@ -86,8 +86,8 @@ gulp.task('server', () => {
   gulp.watch('src/less/**/*.less', gulp.series('less'));
   gulp.watch('src/less/**/*.less').on('change', server.reload);
 
-  gulp.watch('src/js/*.js', gulp.series('js'));
-  gulp.watch('src/js/*.js').on('change', server.reload);
+  gulp.watch('src/js/**/*.js', gulp.series('js'));
+  gulp.watch('src/js/**/*.js').on('change', server.reload);
 });
 
 gulp.task('clean', () => {

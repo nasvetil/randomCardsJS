@@ -1,0 +1,23 @@
+.container {
+  width: @minWidthMobile;
+  padding-left: @marginMobile;
+  padding-right: @marginMobile;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: @minWidthTablet) and (max-width: @minWidthDesktop) {
+  .container {
+    width: @minWidthTablet;
+    padding-left: @marginTablet;
+    padding-right: @marginTablet;
+  }
+}
+
+@media (min-width: @minWidthDesktop) {
+  .container {
+    width: @minWidthDesktop;
+    padding-left: @marginDesktop;
+    padding-right: @marginDesktop;
+  }
+}
