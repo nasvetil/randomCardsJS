@@ -6,7 +6,6 @@ class CardType {
     this._count = count;
     this._backgroundColor = backgroundColor;
     const backgroundColorHLS = hexToHSL(this._backgroundColor);
-    console.log(backgroundColorHLS);
     if (backgroundColorHLS.l < 50) {
       this._textColor = '#ffffff';
     } else {
@@ -85,7 +84,8 @@ class CardType {
 
     // Create DOM node
     const cardTypeBlock = document.createElement('section');
-    cardTypeBlock.className = 'form__item';
+    cardTypeBlock.classList.add('form__item');
+    cardTypeBlock.classList.add('form__item--card-type');
     cardTypeBlock.append(this.createBackgroundColorMardElem());
     cardTypeBlock.append(this.createLabelElem(numb, 'Card type name', true));
     cardTypeBlock.append(this.createInputElem(numb, 'input--name', 'text', this._name, 'card type name'));

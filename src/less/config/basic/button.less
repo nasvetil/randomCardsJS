@@ -7,20 +7,27 @@
   line-height: 36px;
   font-size: 18px;
   padding: 0 10px;
+  width: 100%;
 
   &:hover,
   &:focus {
-    background-color: darken(@colorButtonDefault, 5%);
+    background-color: darken(@colorButtonDefault, 20%);
   }
 
   &:active {
-    background-color: lighten(@colorButtonDefault, 5%);
+    background-color: lighten(@colorButtonDefault, 20%);
   }
 
   &--big {
-    height: 48px;
-    line-height: 48px;
-    font-size: 22px;
-    padding: 0 15px;
+    height: 56px;
+    line-height: 56px;
+    font-size: 36px;
+    padding: 0 16px;
+  }
+}
+
+@media (min-width: @minWidthTablet) {
+  .button {
+    width: auto;
   }
 }
