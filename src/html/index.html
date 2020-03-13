@@ -22,11 +22,21 @@
         <div class="form__wrap">
             <section class="form__item">
               <label class="form__label" for="cards-count">Cards count</label>
-              <input class="input" id="cards-count" type="number">
+              <input class="form__input input" id="cards-count" type="number">
             </section>
-            <section class="form__item">
-              <label class="form__label" for="special-cards-count">Active cards count</label>
-              <input class="input" id="special-cards-count" type="number">
+            <section id="cards_type_list" class="form__group">
+              <!-- <section class="form__item">
+                <label class="form__label" for="special-cards-name">Type card name</label>
+                <input class="form__input input" id="special-cards-name" type="text" value="">
+                <label class="form__label" for="special-cards-count">count</label>
+                <input class="form__input input" id="special-cards-count" type="number" value="0">
+              </section> -->
+            </section>
+            <section class="form__item form__item--submit">
+              <input id="add_card_type" class="button button" type="button" value="Add card type">
+            </section>
+            <section class="form__item form__item--submit">
+              <input id="remove_card_type" class="button button" type="button" value="Remove card type">
             </section>
             <section class="form__item form__item--submit">
               <input id="generate-button" class="button button--big" type="button" value="Generate">
@@ -41,6 +51,6 @@
       <a href="https://github.com/nasvetil" class="page-footer__link link link">nasvetil</a>
     </div>
   </footer>
-  <script src="js/app.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>

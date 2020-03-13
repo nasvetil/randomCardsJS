@@ -16,8 +16,10 @@ const posthtml = require('gulp-posthtml');
 const minifier = require('posthtml-minifier');
 
 // Plugins for js
-const babel = require('gulp-babel');
-const uglify = require('gulp-uglify');
+// const uglify = require('gulp-uglify');
+const webpack = require('webpack');
+const webpackStream = require('webpack-stream');
+const webpackConfig = require('./webpack.config.js');
 
 gulp.task('html', () => {
   const plugins = [
@@ -62,18 +64,16 @@ gulp.task('normalize', () => {
 });
 
 gulp.task('js', () => {
-  return gulp.src('src/js/**/*.js')
-    .pipe(babel({
-      presets: ['@babel/env']
-    }))
-    .pipe(uglify())
-    .pipe(rename(
-      {
-        suffix: '.min'
-      }
-    ))
-    .pipe(gulp.dest('build/js'));
+  return gulp.src('./src/js/app.js')
+    .pipe(webpackStream(webpackConfig), webpack)
+    .pipe(gulp.dest('./build/js'));
 });
+
+// gulp.task('js', () => {
+//   gulp.src('./src/js/index.js')
+//     .pipe(webpackStream(webpackConfig), webpack)
+//     .pipe(gulp.dest('./dist/js'));
+// });
 
 gulp.task('server', () => {
   server.init({

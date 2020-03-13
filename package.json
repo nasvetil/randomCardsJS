@@ -21,9 +21,10 @@
   },
   "homepage": "https://github.com/nasvetil/randomCardsJS#readme",
   "devDependencies": {
-    "@babel/core": "^7.8.7",
-    "@babel/preset-env": "^7.8.7",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
     "autoprefixer": "^9.7.4",
+    "babel-loader": "^8.0.6",
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
     "eslint": "^6.8.0",
@@ -42,6 +43,8 @@
     "gulp-rename": "^2.0.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
-    "posthtml-minifier": "^0.1.0"
+    "posthtml-minifier": "^0.1.0",
+    "webpack": "^4.42.0",
+    "webpack-stream": "^5.2.1"
   }
 }
